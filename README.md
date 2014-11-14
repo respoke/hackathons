@@ -1,6 +1,4 @@
-hackathons-koding
+hackathons
 =================
 
-Landing page for Koding.com virtual hackathon
-
-Check it out Kyle - so nice :) 
+Directory for Respoke Hackathon Pages
