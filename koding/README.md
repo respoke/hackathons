@@ -50,4 +50,3 @@ After you're all signed up, head over to our [Quickstart Guide](https://docs.res
 
 #Good luck!
 From the entire Respoke team, we want to wish you all the best of luck at the hackathon and can't wait to see what you build! 
-
