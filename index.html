@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Hackathons : Directory for Respoke Kackathons">
+    <meta name="description" content="Hackathons : Directory for Respoke Hackathons">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/respoke/hackathons">View on GitHub</a>
 
           <h1 id="project_title">Hackathons</h1>
-          <h2 id="project_tagline">Directory for Respoke Kackathons</h2>
+          <h2 id="project_tagline">Directory for Respoke Hackathons</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/respoke/hackathons/zipball/master">Download this project as a .zip file</a>
@@ -51,31 +51,31 @@
 
 <p>Let's say you want to add <strong>messaging</strong> capability to your app (maybe for support purpose, maybe to allow your users to communication with each other). You can do this by connecting to Respoke and using the sendMessage method:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c"><span class="pl-pdc">//</span> make an endpoint for that recipient</span>
-<span class="pl-s">var</span> endpoint <span class="pl-ko">=</span> client.getEndpoint({ id<span class="pl-ko">:</span> remote });
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// make an endpoint for that recipient</span>
+<span class="pl-s">var</span> endpoint <span class="pl-k">=</span> client.getEndpoint({ id<span class="pl-k">:</span> remote });
 
-<span class="pl-c"><span class="pl-pdc">//</span> grab the text to send</span>
-<span class="pl-s">var</span> messageText <span class="pl-ko">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>#textToSend<span class="pl-pds">"</span></span>).val();
+<span class="pl-c">// grab the text to send</span>
+<span class="pl-s">var</span> messageText <span class="pl-k">=</span> $(<span class="pl-s1"><span class="pl-pds">"</span>#textToSend<span class="pl-pds">"</span></span>).val();
 
-<span class="pl-c"><span class="pl-pdc">//</span> send it</span>
-endpoint.sendMessage({ message <span class="pl-ko">:</span> messageText });</pre></div>
+<span class="pl-c">// send it</span>
+endpoint.sendMessage({ message <span class="pl-k">:</span> messageText });</pre></div>
 
 <p>How about making an <strong>Audio Call</strong>?</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c"><span class="pl-pdc">//</span> Call somebody</span>
-$(<span class="pl-s1"><span class="pl-pds">"</span>#makeCall<span class="pl-pds">"</span></span>).<span class="pl-sf">click</span>(<span class="pl-s">function</span> () {
-    <span class="pl-s">var</span> endpoint <span class="pl-ko">=</span> client.getEndpoint({ id<span class="pl-ko">:</span> $(<span class="pl-s1"><span class="pl-pds">"</span>#remoteId<span class="pl-pds">"</span></span>).val() });
-    call <span class="pl-ko">=</span> endpoint.startAudioCall();
-    call.listen(<span class="pl-s1"><span class="pl-pds">'</span>hangup<span class="pl-pds">'</span></span>, <span class="pl-s">function</span> () {
-        call <span class="pl-ko">=</span> <span class="pl-c1">null</span>;
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// Call somebody</span>
+$(<span class="pl-s1"><span class="pl-pds">"</span>#makeCall<span class="pl-pds">"</span></span>).<span class="pl-s3">click</span>(<span class="pl-st">function</span> () {
+    <span class="pl-s">var</span> endpoint <span class="pl-k">=</span> client.getEndpoint({ id<span class="pl-k">:</span> $(<span class="pl-s1"><span class="pl-pds">"</span>#remoteId<span class="pl-pds">"</span></span>).val() });
+    call <span class="pl-k">=</span> endpoint.startAudioCall();
+    call.listen(<span class="pl-s1"><span class="pl-pds">'</span>hangup<span class="pl-pds">'</span></span>, <span class="pl-st">function</span> () {
+        call <span class="pl-k">=</span> <span class="pl-c1">null</span>;
     });
 });
 
-<span class="pl-c"><span class="pl-pdc">//</span> Hang up on them</span>
-$(<span class="pl-s1"><span class="pl-pds">"</span>#endCall<span class="pl-pds">"</span></span>).<span class="pl-sf">click</span>(<span class="pl-s">function</span> () {
+<span class="pl-c">// Hang up on them</span>
+$(<span class="pl-s1"><span class="pl-pds">"</span>#endCall<span class="pl-pds">"</span></span>).<span class="pl-s3">click</span>(<span class="pl-st">function</span> () {
     <span class="pl-k">if</span> (call) {
         call.hangup();
-        call <span class="pl-ko">=</span> <span class="pl-c1">null</span>;
+        call <span class="pl-k">=</span> <span class="pl-c1">null</span>;
     }
 });</pre></div>
 
